@@ -1,0 +1,174 @@
+@charset "UTF-8";
+/* 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+    color: #000;
+    box-sizing: border-box;
+    font-family: "나눔스퀘어라운드";
+}
+
+a{text-decoration: none;color: #000;}
+a:hover{text-decoration: none;color: #000 !important;}
+ul,li{list-style: none;}
+button,input{outline: none;}
+.main_480{display: none;}
+#wrap{position: relative;}
+
+/* 헤더 */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 5px 50px rgba(0,0,0,0.1);
+    height: 100px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+#logo{font-size: 1.3em;}
+
+/* 네비게이션 */
+header > nav{
+    height: 100%;
+    width: 760px;
+    justify-content: space-around;
+}
+
+header > nav > ul{height: 100%;}
+.nav_dep1{position: relative;}
+.nav_dep1 > a{
+    display: inline-block;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: .3s;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_dep1:hover > a{color: #32547B !important;}
+.nav_dep2{
+    position: fixed;
+    background-color: #FAFAFA;
+    top:100px;
+    left: 0;
+    padding:0 calc(50% - 420px);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.nav_dep1:hover .nav_dep2{height: 340px;border-top: 1px solid #ddd;border-bottom:5px solid #32547B;}
+.nav_dep2 > li{
+    display: inline-block;
+    margin: 20px 0;
+    padding:0 20px;
+    font-weight: bold;
+    width: 200px;
+    height: 130px;
+    border-right: 1px solid #ddd;
+}
+
+.nav_dep2 > li:nth-child(4){border: none;}
+.nav_dep2 > li:last-child{border: none;}
+.nav_dep2 > li > a{transition: .3s;width: 100%;display: block;}
+.nav_dep2 > li > a:hover{opacity: 0.5;}
+.nav_dep3{padding-left: 0.5rem;margin-top: 0.5rem;}
+.nav_dep3 > li{font-weight: normal;}
+.nav_dep3 > li > a{transition: .3s;display: block;width: 100%;}
+.nav_dep3 > li > a:hover{color: #F9CB49 !important;}
+
+/* 유틸리티 */
+.util_menu > li{padding: 0 10px;border-right: 1px solid #ddd;}
+.util_menu > li > a{font-size: 0.9em;transition: .3s;}
+.util_menu > li:last-child{border: none;}
+.util_menu > li > a:hover{color: #000; opacity: 0.5;}
+
+#util_language{padding: 5px;border: 1px solid #ddd;border-radius: 5px;outline: none; cursor: pointer;}
+
+/* 모바일 */
+#util_area{flex-direction: column; align-items: flex-end;}
+#menu_open_btn{cursor: pointer;transition: .3s;}
+#menu_open_btn:hover{opacity: 0.5;}
+#menu_open_btn > i{font-size: 2.5em;}
+
+@media screen and (max-width:1160px){
+    .main_480{display: block;}
+    header > nav{
+        position: fixed;
+        top: 100px;
+        right: -400px;
+        background-color: #FAFAFA;
+        width: 400px;
+        height: 100%;
+        transition: .3s;
+    }
+
+    header > nav > ul{
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+    }
+
+    .nav_dep1 > a{
+        height: auto;
+        justify-content: flex-start;
+        margin: 20px 30px;
+    }
+
+    .nav_dep2{
+        position: relative;
+        padding: 0 20px;
+        top: 10px;
+        border-bottom: none !important;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .nav_dep2:hover{height: 340px;}
+    .nav_dep2 > li{
+        margin: 5px 0;
+        padding: 0;
+        height: auto;
+        border: none;
+    }
+
+    #util_area{
+        position: fixed;
+        bottom: 0;
+        right: -400px;
+        width: 400px;
+        background-color: #eee;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px;
+        transition: .3s;
+    }
+
+    .util_menu{margin: 0 10px;}
+
+    #menu_open:checked ~ header nav{right: 0;}
+    #menu_open:checked ~ header #util_area{right: 0;}
+}
+
+/* 슬라이드 */
+@keyframes slide{
+    
+}
+
+/* 비쥬얼 영역 */
+#visual{
+    width: 100%;
+    height: 500px;
+    margin-top: 100px;
+    background-color: #444F64;
+}
