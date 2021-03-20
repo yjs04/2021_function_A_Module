@@ -136,13 +136,98 @@
             <div class="visual_slide"></div>
             <div class="visual_slide"></div>
             <div class="visual_slide"></div>
+
+            <div class="visual_bc"></div>
+
+            <div class="visual_text">1</div>
+            <div class="visual_text">2</div>
+            <div class="visual_text">3</div>
         </div>
         <!-- /비쥬얼영역 -->
 
         <!-- 콘텐츠 -->
+        <div class="content container-lg">
+            <!-- 새소식 -->
+            <div class="content_wrap">
+                <div class="content_title_box">
+                    <h5>새소식</h5>
+                </div>
+                <div class="content_box" id="main_notice_area">
+                    <input hidden type="radio" checked name="main_notice" value="notice_main" id="notice_main">
+                    <input hidden type="radio" name="main_notice" value="notice_board" id="notice_board">
+                    <input hidden type="radio" name="main_notice" value="notice_entry" id="notice_entry">
+                    <input hidden type="radio" name="main_notice" value="notice_info" id="notice_info">
+
+                    <div id="main_notice_nav">
+                        <label for="notice_main">공지사항</label>
+                        <label for="notice_board">보도자료</label>
+                        <label for="notice_entry">채용공고</label>
+                        <label for="notice_info">입찰정보</label>
+                    </div>
+                    <div id="main_notice_content">
+                        <div data-type="main">
+                            <div class="main_notice_header">
+                                <h5>[공지사항] Lorem ipsum dolor</h5>
+                                <p>2021-03-01</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                                Dolorum minima magni soluta corporis totam unde inventore modi veniam impedit,<br>
+                                quae, quos quia mollitia illo, in cum. Soluta libero harum magni?
+                             </p>
+                        </div>
+
+                        <div data-type="board">
+                            <div class="main_notice_header">
+                                <h5>[보도자료] dolor</h5>
+                                <p>2021-03-11</p>
+                            </div>
+                            <p>Lorem ipsum adipisicing elit.<br>
+                                Dolorum minima magni soluta corporis totam unde inventore modi veniam impedit,<br>
+                                quae, quos qlo, in cum. Soluta libero harum magni?
+                             </p>
+                        </div>
+
+                        <div data-type="entry">
+                            <div class="main_notice_header">
+                                <h5>[채용공고] Lorem ipsum dolor amet consectetur</h5>
+                                <p>2021-03-15</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                                Dolorum minima magni soluta corporis totam unde inventore modi veniam impedit,<br>
+                                quae, quos quia mollitia illo, in cum. Soluta libero harum magni?<br>
+                                quae, quos quia mollitia illo, in cum. Soluta libero harum magni?
+                             </p>
+                        </div>
+
+                        <div data-type="info">
+                            <div class="main_notice_header">
+                                <h5>[입찰정보] Lorem ipsum</h5>
+                                <p>2021-03-05</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                                Dolorum minima magni soluta corporis totam unde inventore modi veniam impedit.
+                             </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /새소식 -->
+        </div>
         <!-- /콘텐츠 -->
 
         <!-- 푸터 -->
+        <footer>
+            <a href="#" id="footer_logo">무형문화재관리원</a>
+            <ul class="footer_menu">
+                <li><a href="#">이용 안내</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">저작권 보호 정책</a></li>
+                <li><a href="#">도로명 주소안내</a></li>
+                <li><a href="#">사이트 오류 신고</a></li>
+            </ul>
+            <p id="copyright">인천시 부평구 무네미로 448번길 77 한국산업인력공단 글로벌숙련기술진흥원<br>COPYRIGHTⓒ 2016 HRDKOREA</p>
+        </footer>
         <!-- /푸터 -->
     </div>
 </body>
