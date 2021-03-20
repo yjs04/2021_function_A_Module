@@ -407,3 +407,36 @@ footer *{color: #fff;}
 #content_status_table tbody tr:last-child{border-bottom: none;}
 
 /* sub2 page */
+#month_calendar_header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #32547B;
+    padding-bottom: 0.5em;
+}
+
+.month_calendar_btn{
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,0);
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0 2em;
+    transition: .3s;
+}
+
+.month_calendar_btn:hover{background-color: #EBEFFF;}
+#month_calendar_header > h5{font-size: 1.5em;font-weight: bold;}
+#month_calendar_table{width: 100%;}
+#month_calendar_table tr{border-bottom: 1px solid #ddd;}
+#month_calendar_table tbody tr:last-child{border-bottom: none;}
+#month_calendar_table tr > *{padding: 1em 0 4.5em 0.5em ;width: calc(100% / 7);cursor: pointer;transition: .3s;}
+#month_calendar_table tr > *:hover{background-color: #EBEFFF;}
+#month_calendar_table tr > *:first-child{color: #F03C3C;}
+#month_calendar_table tr > *:last-child{color: #3F598A;}
+#month_calendar_table th{font-size: 1.2em;padding-bottom: 1em;}
+#month_calendar_table td.hide{opacity: 0.5;background-color: #eee;}
+#month_calendar_table td{font-size: 1.05em;}
