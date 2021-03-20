@@ -132,7 +132,7 @@
         <!-- /헤더 -->
 
         <!-- 비쥬얼영역 -->
-        <div id="visual">
+        <div id="visual" class="main_page">
             <div class="visual_slide"></div>
             <div class="visual_slide"></div>
             <div class="visual_slide"></div>
@@ -146,73 +146,144 @@
         <!-- /비쥬얼영역 -->
 
         <!-- 콘텐츠 -->
-        <div class="content container-lg">
-            <!-- 새소식 -->
-            <div class="content_wrap">
-                <div class="content_title_box">
-                    <h5>새소식</h5>
-                </div>
-                <div class="content_box" id="main_notice_area">
-                    <input hidden type="radio" checked name="main_notice" value="notice_main" id="notice_main">
-                    <input hidden type="radio" name="main_notice" value="notice_board" id="notice_board">
-                    <input hidden type="radio" name="main_notice" value="notice_entry" id="notice_entry">
-                    <input hidden type="radio" name="main_notice" value="notice_info" id="notice_info">
-
-                    <div id="main_notice_nav">
-                        <label for="notice_main">공지사항</label>
-                        <label for="notice_board">보도자료</label>
-                        <label for="notice_entry">채용공고</label>
-                        <label for="notice_info">입찰정보</label>
+        <div class="content">
+            <!-- 새소식 & 팝업 -->
+            <div class="container d-flex flex-wrap justify-content-center">
+                <!-- 새소식 -->
+                <div class="content_wrap" id="main_notice_wrap">
+                    <div class="content_title_box">
+                        <h5>새소식</h5>
                     </div>
-                    <div id="main_notice_content">
-                        <div data-type="main">
-                            <div class="main_notice_header">
-                                <h5>[공지사항] Lorem ipsum dolor</h5>
-                                <p>2021-03-01</p>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-                                Dolorum minima magni soluta corporis totam unde inventore modi veniam impedit,<br>
-                                quae, quos quia mollitia illo, in cum. Soluta libero harum magni?
-                             </p>
-                        </div>
+                    <div class="content_box" id="main_notice_area">
+                        <input hidden type="radio" checked name="main_notice" value="notice_main" id="notice_main">
+                        <input hidden type="radio" name="main_notice" value="notice_board" id="notice_board">
+                        <input hidden type="radio" name="main_notice" value="notice_entry" id="notice_entry">
+                        <input hidden type="radio" name="main_notice" value="notice_info" id="notice_info">
 
-                        <div data-type="board">
-                            <div class="main_notice_header">
-                                <h5>[보도자료] dolor</h5>
-                                <p>2021-03-11</p>
-                            </div>
-                            <p>Lorem ipsum adipisicing elit.<br>
-                                Dolorum minima magni soluta corporis totam unde inventore modi veniam impedit,<br>
-                                quae, quos qlo, in cum. Soluta libero harum magni?
-                             </p>
+                        <div id="main_notice_nav">
+                            <label for="notice_main">공지사항</label>
+                            <label for="notice_board">보도자료</label>
+                            <label for="notice_entry">채용공고</label>
+                            <label for="notice_info">입찰정보</label>
                         </div>
-
-                        <div data-type="entry">
-                            <div class="main_notice_header">
-                                <h5>[채용공고] Lorem ipsum dolor amet consectetur</h5>
-                                <p>2021-03-15</p>
+                        <div id="main_notice_content">
+                            <div data-type="main">
+                                <div class="main_notice_header">
+                                    <h5>[공지사항] Lorem ipsum dolor</h5>
+                                    <p>2021-03-01</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                                    Dolorum minima magni soluta corporis totam unde inventore modi veniam impedit,<br>
+                                    quae, quos quia mollitia illo, in cum. Soluta libero harum magni?
+                                </p>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-                                Dolorum minima magni soluta corporis totam unde inventore modi veniam impedit,<br>
-                                quae, quos quia mollitia illo, in cum. Soluta libero harum magni?<br>
-                                quae, quos quia mollitia illo, in cum. Soluta libero harum magni?
-                             </p>
-                        </div>
 
-                        <div data-type="info">
-                            <div class="main_notice_header">
-                                <h5>[입찰정보] Lorem ipsum</h5>
-                                <p>2021-03-05</p>
+                            <div data-type="board">
+                                <div class="main_notice_header">
+                                    <h5>[보도자료] dolor</h5>
+                                    <p>2021-03-11</p>
+                                </div>
+                                <p>Lorem ipsum adipisicing elit.<br>
+                                    Dolorum minima magni soluta corporis totam unde inventore modi veniam impedit,<br>
+                                    quae, quos qlo, in cum. Soluta libero harum magni?
+                                </p>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-                                Dolorum minima magni soluta corporis totam unde inventore modi veniam impedit.
-                             </p>
-                        </div>
 
+                            <div data-type="entry">
+                                <div class="main_notice_header">
+                                    <h5>[채용공고] Lorem ipsum dolor amet consectetur</h5>
+                                    <p>2021-03-15</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                                    Dolorum minima magni soluta corporis totam unde inventore modi veniam impedit,<br>
+                                    quae, quos quia mollitia illo, in cum. Soluta libero harum magni?<br>
+                                    quae, quos quia mollitia illo, in cum. Soluta libero harum magni?
+                                </p>
+                            </div>
+
+                            <div data-type="info">
+                                <div class="main_notice_header">
+                                    <h5>[입찰정보] Lorem ipsum</h5>
+                                    <p>2021-03-05</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                                    Dolorum minima magni soluta corporis totam unde inventore modi veniam impedit.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /새소식 -->
+
+                <!-- 팝업 -->
+                <div class="content_wrap" id="main_popup">
+                    <div class="content_box">
+
+                    </div>
+                </div>
+                <!-- /팝업 -->
+            </div>
+
+            <!-- 행사 -->
+            <div class="main_event_wrap">
+                <div class="content_wrap" id="main_event">
+                    <div class="content_title_box">
+                        <h5>행사</h5>
+                    </div>
+                    <div class="content_box container">
+                        <div class="main_event_item">
+                            <h5 class="main_title">Lorem ipsum dolor</h5>
+                            <div class="main_event_body">
+                                <div class="main_event_img">
+                                    
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ex similique itaque ab corporis placeat molestias fa</p>
+                                <button class="main_event_btn">상세내용 보기 <i class="fa fa-angle-right ml-1"></i></button>
+                            </div>
+                        </div>
+                        <div class="main_event_item">
+                            <h5 class="main_title">Lorem ipsum dolor</h5>
+                            <div class="main_event_body">
+                                <div class="main_event_img">
+                                    
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ex similique itaque ab corporis placeat molestias fa</p>
+                                <button class="main_event_btn">상세내용 보기 <i class="fa fa-angle-right ml-1"></i></button>
+                            </div>
+                        </div>
+                        <div class="main_event_item">
+                            <h5 class="main_title">Lorem ipsum dolor</h5>
+                            <div class="main_event_body">
+                                <div class="main_event_img">
+                                    
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ex similique itaque ab corporis placeat molestias fa</p>
+                                <button class="main_event_btn">상세내용 보기 <i class="fa fa-angle-right ml-1"></i></button>
+                            </div>
+                        </div>
+                        <div class="main_event_item">
+                            <h5 class="main_title">Lorem ipsum dolor</h5>
+                            <div class="main_event_body">
+                                <div class="main_event_img">
+                                    
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ex similique itaque ab corporis placeat molestias fa</p>
+                                <button class="main_event_btn">상세내용 보기 <i class="fa fa-angle-right ml-1"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- /새소식 -->
+            <!-- /행사 -->
+
+            <!-- 배너 -->
+            <div class="container" id="main_banner">
+                <div class="content_box">
+
+                </div>
+            </div>
+            <!-- /배너 -->
         </div>
         <!-- /콘텐츠 -->
 

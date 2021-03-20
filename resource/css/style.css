@@ -186,10 +186,14 @@ option{font-family: "나눔스퀘어라운드" !important;}
 /* 비쥬얼 영역 */
 #visual{
     width: 100%;
-    height: 500px;
+    height: 300px;
     margin-top: 100px;
     position: relative;
+    overflow: hidden;
+    background-color: #32547B;
 }
+
+#visual.main_page{height: 500px;}
 
 #visual > *{
     position: absolute;
@@ -214,7 +218,7 @@ option{font-family: "나눔스퀘어라운드" !important;}
 .content{
     width: 100%;
     position: relative;
-    padding: 1em;
+    padding: 1em 0;
 }
 
 .content_wrap{
@@ -223,7 +227,7 @@ option{font-family: "나눔스퀘어라운드" !important;}
 }
 
 .content_title_box{width: 100%;margin-bottom: 1em;}
-.content_title_box > h5{font-size: 1.6em;font-weight: bold;background-color: #fff;position: relative;color: #32547B;}
+.content_title_box > h5{font-size: 1.6em;font-weight: bold;position: relative;color: #32547B;}
 .content_title_box > h5::before{
     content: '';
     width: 20px;
@@ -238,8 +242,9 @@ option{font-family: "나눔스퀘어라운드" !important;}
 .content_box{position: relative;width: 100%;}
 
 /* 새소식 */
-#main_notice_area{overflow: hidden;display: inline-block;}
-#main_notice_nav{display: flex;}
+#main_notice_wrap{width: calc(100% - 400px); min-width: 400px;}
+#main_notice_area{overflow: hidden;display: inline-block;height: 400px;}
+#main_notice_nav{display: flex;height: 50px;}
 #main_notice_nav > label{
     font-size: 1.05em;
     font-weight: bold;
@@ -291,6 +296,73 @@ input[value="notice_main"]:checked ~ #main_notice_content > div[data-type="main"
 input[value="notice_board"]:checked ~ #main_notice_content > div[data-type="board"]{opacity: 1;}
 input[value="notice_entry"]:checked ~ #main_notice_content > div[data-type="entry"]{opacity: 1;}
 input[value="notice_info"]:checked ~ #main_notice_content > div[data-type="info"]{opacity: 1;}
+
+/* 팝업 */
+#main_popup{width: 100%;max-width: 400px;}
+#main_popup > .content_box{
+    margin-top: calc(30px + 1em);
+    background-color: #32547B;
+    height: 400px;
+}
+
+/* 행사 */
+.main_event_wrap{background-color: #F2F4FF;}
+#main_event > .content_title_box > h5{text-align: center;}
+#main_event > .content_title_box > h5::before{display: none;}
+#main_event > .content_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main_event_item{
+    width: 20%;
+    min-width: 250px;
+    padding: 2em 0.5em;
+    padding-bottom: 0;
+    border: 3px solid #D7DEFF;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.main_event_item:hover{border-color: #32547B;}
+
+.main_title{text-align: center;padding-bottom: 0.5em;}
+.main_event_body{width: 100%;padding: 0 10px;}
+.main_event_img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #D7DEFF;
+    margin: 0.5em auto;
+}
+
+.main_event_body > p{font-size: 0.85em;}
+.main_event_btn{
+    width: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: bold;
+    font-size: 1.05em;
+    text-align: right;
+    padding: 1em 0.5em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main_event_btn:hover{opacity: 0.5;}
+
+/* 배너 */
+#main_banner{margin: 2em auto 1em auto;}
+#main_banner > .content_box{
+    position: relative;
+    background-color: #32547B;
+    height: 70px;
+    width: 100%;
+}
 
 /* 푸터 */
 footer{
