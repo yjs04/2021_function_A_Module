@@ -11,9 +11,10 @@
 a{text-decoration: none;color: #000;}
 a:hover{text-decoration: none;color: inherit !important;}
 ul,li{list-style: none;}
-button,input{outline: none;}
+button,input{outline: none !important;}
 .main_480{display: none;}
 #wrap{position: relative;width: 100%;overflow: hidden;}
+label{margin: 0 !important;}
 
 /* 헤더 */
 header{
@@ -108,7 +109,7 @@ option{font-family: "나눔스퀘어라운드" !important;}
 #menu_open_btn:hover{opacity: 0.5;}
 #menu_open_btn > i{font-size: 2.5em;}
 
-@media screen and (max-width:1160px){
+@media screen and (max-width:1300px){
     .main_480{display: block;}
     header > nav{
         position: fixed;
@@ -321,6 +322,7 @@ option{font-family: "나눔스퀘어라운드" !important;}
 #main_notice_content{
     position: relative;
     min-height: 350px;
+    height: calc(100% - 50px);
     border:2px solid #ddd;
     border-top: none;
     margin-top: -2px;
@@ -362,12 +364,12 @@ option{font-family: "나눔스퀘어라운드" !important;}
     font-weight: bold;
     width: 75%;
     min-width: 300px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.main_notice_cate{width: 15%; min-width: 100px; display: inline-block;}
+.main_notice_cate{width: 15%; min-width: 75px; display: inline-block;}
 .main_notice_date{font-size: 1.05em;font-weight: bold;color: #555;}
 .noData{
     width: 100%;
@@ -379,8 +381,10 @@ option{font-family: "나눔스퀘어라운드" !important;}
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1em 0;
 }
 
+@media screen and (max-width:990px){#main_notice_area{height: 500px;}}
 input[value="notice_main"]:checked ~ #main_notice_nav > label[for="notice_main"]{background-color: #32547B;color: #fff;}
 input[value="notice_board"]:checked ~ #main_notice_nav > label[for="notice_board"]{background-color: #32547B;color: #fff;}
 input[value="notice_entry"]:checked ~ #main_notice_nav > label[for="notice_entry"]{background-color: #32547B;color: #fff;}
@@ -395,17 +399,27 @@ input[value="notice_info"]:checked ~ #main_notice_content > div[data-type="info"
 #main_popup{width: 100%;max-width: 400px;}
 #main_popup > .content_box{
     margin-top: calc(30px + 1em);
-    background-color: #32547B;
-    height: 400px;
+    height: calc(100% - 55px);
+    min-height: 350px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
+.main_popup_img{
+    width: 100%;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.main_popup_img:hover{opacity: 0.5;}
+
 /* 행사 */
-.main_event_wrap{background-color: #F2F4FF;}
+.main_event_wrap{background-color: #F2F4FF;margin: 4em 0;}
 #main_event > .content_title_box > h5{text-align: center;}
 #main_event > .content_title_box > h5::before{display: none;}
 #main_event > .content_box{
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -413,6 +427,7 @@ input[value="notice_info"]:checked ~ #main_notice_content > div[data-type="info"
 .main_event_item{
     width: 20%;
     min-width: 250px;
+    height: 350px;
     padding: 2em 0.5em;
     padding-bottom: 0;
     border: 3px solid #D7DEFF;
@@ -423,18 +438,24 @@ input[value="notice_info"]:checked ~ #main_notice_content > div[data-type="info"
 }
 
 .main_event_item:hover{border-color: #32547B;}
-
-.main_title{text-align: center;padding-bottom: 0.5em;}
+.main_title{text-align: center;height: 10%;font-size: 1.25em;}
 .main_event_body{width: 100%;padding: 0 10px;}
 .main_event_img{
     width: 100px;
     height: 100px;
     border-radius: 100%;
-    background-color: #D7DEFF;
-    margin: 0.5em auto;
+    border:3px solid #D7DEFF;
+    margin:2em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
 }
 
-.main_event_body > p{font-size: 0.85em;}
+.main_event_img > i{    transition: 0.3s;font-size: 3em;color: #D7DEFF;}
+.main_event_item:hover .main_event_img{border-color: #32547B;}
+.main_event_item:hover .main_event_img > i {color: #32547B;}
+.main_event_body > p{font-size: 1.05em;}
 .main_event_btn{
     width: 100%;
     border: none;
@@ -442,21 +463,131 @@ input[value="notice_info"]:checked ~ #main_notice_content > div[data-type="info"
     font-weight: bold;
     font-size: 1.05em;
     text-align: right;
-    padding: 1em 0.5em;
+    padding: 0.5em;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .main_event_btn:hover{opacity: 0.5;}
 
+/* 유네스코 */
+.unesco_item{display: flex;}
+.unesco_item_title{
+    transition: .3s;
+    width: 150px;
+    margin: 0px 1em;
+    padding: 1em 0;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #ddd;
+    border-right: 2px solid #ddd;
+}
+
+.unesco_item:hover .unesco_item_title{border-color: #32547B;color: #32547B;}
+.unesco_item:hover .unesco{color: #32547B;}
+.unesco_item_list{
+    width: calc(100% - 150px);
+    margin: 30px 1em;
+}
+
+.unesco{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #ddd;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0;
+    transition: .3s;
+}
+
+.unesco:last-child{border: none;}
+.unesco_body{display: flex;align-items: center;}
 /* 배너 */
-#main_banner{margin: 2em auto 1em auto;}
+#main_banner{margin: 2.5em 0 2em 0;width: 100%;}
 #main_banner > .content_box{
     position: relative;
-    background-color: #32547B;
-    height: 70px;
+    height: 50px;
     width: 100%;
+    overflow: hidden;
 }
+
+.banner_img{
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    background-repeat: no-repeat;
+    animation: banner 30s infinite;
+}
+
+.banner_img:nth-child(1){
+    animation-delay: calc(0s);
+    background-image: url('../image/banner1.png');
+}
+.banner_img:nth-child(2){
+    animation-delay: calc(0s - 3s);
+    background-image: url('../image/banner2.png');
+}
+.banner_img:nth-child(3){
+    animation-delay: calc(0s - 6s);
+    background-image: url('../image/banner3.png');
+}
+.banner_img:nth-child(4){
+    animation-delay: calc(0s - 9s);
+    background-image: url('../image/banner4.png');
+}
+.banner_img:nth-child(5){
+    animation-delay: calc(0s - 12s);
+    background-image: url('../image/banner5.png');
+}
+.banner_img:nth-child(6){
+    animation-delay: calc(0s - 15s);
+    background-image: url('../image/banner6.png');
+}
+.banner_img:nth-child(7){
+    animation-delay: calc(0s - 18s);
+    background-image: url('../image/banner7.png');
+}
+.banner_img:nth-child(8){
+    animation-delay: calc(0s - 21s);
+    background-image: url('../image/banner8.png');
+}
+.banner_img:nth-child(9){
+    animation-delay: calc(0s - 24s);
+    background-image: url('../image/banner9.png');
+}
+.banner_img:nth-child(10){
+    animation-delay: calc(0s - 27s);
+    background-image: url('../image/banner10.png');
+}
+
+@keyframes banner{
+    0%{right: -250px;}
+    6.666666666666667%{right: -250px;}
+    10%{right: 0px;}
+    16.666666666666668%{right: 0px;}
+    20%{right: 250px;}
+    26.666666666666668%{right: 250px;}
+    30%{right: 500px;}
+    36.666666666666668%{right: 500px;}
+    40%{right: 750px;}
+    46.666666666666668%{right: 750px;}
+    50%{right: 1000px;}
+    56.666666666666668%{right: 1000px;}
+    60%{right: 1250px;}
+    66.666666666666668%{right: 1250px;}
+    70%{right: 1500px;}
+    76.666666666666668%{right: 1500px;}
+    80%{right: 1750px;}
+    86.666666666666668%{right: 1750px;}
+    90%{right: 2000px;}
+    96.666666666666668%{right: 2000px;}
+    100%{right: 2500px;}
+}
+
 
 /* 푸터 */
 footer{
@@ -493,27 +624,155 @@ footer *{color: #fff;}
 #copyright{width: 100%;margin-top: 1.5em;font-size: 0.9em;}
 
 /* sub1 page */
-#content_status_table{margin: 2em 0;border-top: 5px solid #32547B;}
-#content_status_table tr > *:nth-child(1){width: 50px;}
-#content_status_table tr > *:nth-child(2){width: 20%;}
-#content_status_table tr > *:nth-child(3){width: calc(80% - 50px);}
-#content_status_table th{font-size: 1.25em; padding: 10px;}
-#content_status_table td{padding: 10px; font-size: 1.05em;}
-#content_status_table tbody tr{border-bottom: 1px solid #ddd;}
-#content_status_table tbody tr:first-child{border-top: 1px solid #ddd;}
-#content_status_table tbody tr:last-child{border-bottom: none;}
+#culture_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 1em 0;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #32547B;
+}
+
+#culture_page_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#culture_page_info > p{font-size: 1.05em; font-weight: bold;margin: 0;}
+#culture_all_page{margin-right: 1em !important;}
+#culture_list_type{display: flex;}
+.culture_list_btn.select{color: #fff;background-color: #32547B;}
+.culture_list_btn{
+    border: none;
+    background-color: #ddd;
+    padding: 8px 15px;
+    font-size: 1.05em;
+    transition: 0.3s;
+}
+
+.culture_list_btn:hover{opacity: 0.5;}
+#culture_body{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 1em;
+}
+
+.culture_list{
+    width: 100%;
+    padding: 1em;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+    display: grid;
+    cursor: pointer;
+    grid-template-columns: auto 2fr 2fr 2fr 4fr;
+}
+
+.culture_list:first-child{border-top-left-radius: 5px;border-top-right-radius: 5px;}
+.culture_list:last-child{border: none;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;}
+.culture_list:hover{background-color: #eee;}
+.culture_list > p{margin: 0 0.5em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.culture_list_idx{width: 30px;}
+.culture_item{
+    width: calc(90% / 4);
+    min-width: 250px;
+    padding: 1em;
+    margin: 10px;
+    border: 3px solid #D7DEFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.culture_item:hover{border-color: #32547B;}
+.culture_item_img{
+    width: 200px;
+    height: 200px;
+    background-color: #ddd;
+    overflow: hidden;
+    text-align: center;
+    line-height: 200px;
+    font-size: 1.05em;
+    font-weight: bold;
+}
+
+.culture_item_img > img{width: 100%;min-height: 100%;}
+
+.culture_item_title{
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    font-size: 1.15em;
+}
+
+#culture_footer{
+    width: 100%;
+    margin: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.culture_btn{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    border-radius: 100%;
+    font-size: 1.05em;
+}
+
+#culture_buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 1em;
+    z-index: 10;
+    position: relative;
+}
+
+#culture_pagination_buttons .culture_btn{margin: 0;}
+#culture_pagination_buttons .culture_btn:hover{background-color: #D7DEFF;}
+#culture_buttons > .culture_btn{margin:0 0.5em;}
+#culture_buttons > .culture_btn:hover{background-color: #eee;}
+#culture_buttons > .culture_btn.select{background-color: #32547B;color: #fff;}
+#culture_pagination_buttons{
+    width: 100%;
+    position: absolute;
+    bottom: 0em;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    padding: 0 1em;
+}
+
+#culture_pagination_buttons > div{display: flex;justify-content: center;align-items: center;}
+@media screen and (max-width:780px){#culture_pagination_buttons{bottom: -3em;}}
 
 /* sub2 page */
-#month_calendar_header{
+.calendar_header{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 5px solid #32547B;
     padding-bottom: 0.5em;
+    position: relative;
 }
 
-.month_calendar_btn{
+.calendar_btn{
     border: none;
     width: 50px;
     height: 50px;
@@ -525,15 +784,43 @@ footer *{color: #fff;}
     transition: .3s;
 }
 
-.month_calendar_btn:hover{background-color: #EBEFFF;}
-#month_calendar_header > h5{font-size: 1.5em;font-weight: bold;}
+.calendar_btn > i {pointer-events: none;}
+.calendar_btn:hover{background-color: #EBEFFF;}
+.calendar_header > h5{font-size: 1.5em;font-weight: bold;}
 #month_calendar_table{width: 100%;}
-#month_calendar_table tr{border-bottom: 1px solid #ddd;}
-#month_calendar_table tbody tr:last-child{border-bottom: none;}
-#month_calendar_table tr > *{padding: 1em 0 4.5em 0.5em ;width: calc(100% / 7);cursor: pointer;transition: .3s;}
-#month_calendar_table tr > *:hover{background-color: #EBEFFF;}
-#month_calendar_table tr > *:first-child{color: #F03C3C;}
-#month_calendar_table tr > *:last-child{color: #3F598A;}
-#month_calendar_table th{font-size: 1.2em;padding-bottom: 1em;}
+#month_calendar_table tr > *{
+    padding-top: 1em;
+    width: calc(100% / 7);
+    cursor: pointer;
+    transition: .3s;
+}
+
+#month_calendar_table tr > *:first-child,#month_calendar_table tr > *:first-child .date{color: #F03C3C;}
+#month_calendar_table tr > *:last-child,#month_calendar_table tr > *:last-child .date{color: #3F598A;}
+#month_calendar_table th{font-size: 1.2em;padding-bottom: 1em;padding-left: 0.5em;}
+#month_calendar_table td{font-size: 1.05em;border-top: 1px solid #ddd;}
+#month_calendar_table td .date{width: 100%;margin-bottom: 0.5em;display: block;padding-left: 0.5em;}
 #month_calendar_table td.hide{opacity: 0.5;background-color: #eee;}
-#month_calendar_table td{font-size: 1.05em;}
+#month_calendar_table td:hover{border-color: #32547B;}
+.calendar_list{
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+}
+
+.calendar_list::-webkit-scrollbar{display: none;}
+.calendar_item{
+    background-color: #32547B;
+    padding: 0.5em;
+    width: 100%;
+    font-size: 0.79em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.calendar_item > .showName{width: 50%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.calendar_item > span{color: #fff;}
+.calendar_item:hover{opacity: 0.5;}

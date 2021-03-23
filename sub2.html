@@ -10,12 +10,13 @@
     <!-- /부트스트랩 -->
 
     <!-- 폰트어썸 -->
-    <link rel="stylesheet" href="resource/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="resource/fontawesome/css/all.css">
     <!-- /폰트어썸 -->
 
     <!-- 스타일 -->
     <link rel="stylesheet" href="resource/css/style.css">
     <!-- /스타일 -->
+
 
 </head>
 <body>
@@ -125,13 +126,14 @@
             <!-- /유틸리티 -->
 
             <!-- 모바일 -->
-            <label for="menu_open" class="main_480" id="menu_open_btn"><i class="fa fa-reorder"></i></label>
+            <label for="menu_open" class="main_480" id="menu_open_btn"><i class="fas fa-bars"></i></label>
             <!-- /모바일 -->
         </header>
         <!-- /헤더 -->
 
         <!-- 비쥬얼영역 -->
         <div id="visual">
+            <div class="visual_slide"><img src="resource/image/visual1.jpg" alt="visual_img" title="visual_img"></div>
             <div id="visual_text">행사안내 <i class="fa fa-angle-right"></i> 공연 <i class="fa fa-angle-right"></i> 월간 공연 일정</div>
         </div>
         <!-- /비쥬얼영역 -->
@@ -144,10 +146,10 @@
                         <h5>월간 공연 일정</h5>
                     </div>
                     <div class="content_box">
-                        <div id="month_calendar_header">
-                            <button class="month_calendar_btn"><i class="fa fa-angle-left"></i></button>
-                            <h5>3월</h5>
-                            <button class="month_calendar_btn"><i class="fa fa-angle-right"></i></button>
+                        <div id="month_calendar_header" class="calendar_header">
+                            <button class="month_calendar_btn calendar_btn" id="calendar_before"><i class="fas fa-angle-left"></i></button>
+                            <h5>2021.03</h5>
+                            <button class="month_calendar_btn calendar_btn" id="calendar_next"><i class="fas fa-angle-right"></i></button>
                         </div>
                         <table id="month_calendar_table">
                             <thead>
@@ -163,49 +165,49 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="hide">28</td>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
-                                    <td>6</td>
+                                    <td class="hide"><span class="date">28</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">1</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">2</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">3</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">4</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">5</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">6</span><div class="calendar_list"></div></td>
                                 </tr>
                                 <tr>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>9</td>
-                                    <td>10</td>
-                                    <td>11</td>
-                                    <td>12</td>
-                                    <td>13</td>
+                                    <td><span class="date">7</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">8</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">9</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">10</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">11</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">12</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">13</span><div class="calendar_list"></div></td>
                                 </tr>
                                 <tr>
-                                    <td>14</td>
-                                    <td>15</td>
-                                    <td>16</td>
-                                    <td>17</td>
-                                    <td>18</td>
-                                    <td>19</td>
-                                    <td>20</td>
+                                    <td><span class="date">14</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">15</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">16</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">17</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">18</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">19</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">20</span><div class="calendar_list"></div></td>
                                 </tr>
                                 <tr>
-                                    <td>21</td>
-                                    <td>22</td>
-                                    <td>23</td>
-                                    <td>24</td>
-                                    <td>25</td>
-                                    <td>26</td>
-                                    <td>27</td>
+                                    <td><span class="date">21</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">22</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">23</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">24</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">25</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">26</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">27</span><div class="calendar_list"></div></td>
                                 </tr>
                                 <tr>
-                                    <td>28</td>
-                                    <td>29</td>
-                                    <td>30</td>
-                                    <td>31</td>
-                                    <td class="hide">1</td>
-                                    <td class="hide">2</td>
-                                    <td class="hide">3</td>
+                                    <td><span class="date">28</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">29</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">30</span><div class="calendar_list"></div></td>
+                                    <td><span class="date">31</span><div class="calendar_list"></div></td>
+                                    <td class="hide"><span class="date">1</span><div class="calendar_list"></div></td>
+                                    <td class="hide"><span class="date">2</span><div class="calendar_list"></div></td>
+                                    <td class="hide"><span class="date">3</span><div class="calendar_list"></div></td>
                                 </tr>
                             </tbody>
                         </table>

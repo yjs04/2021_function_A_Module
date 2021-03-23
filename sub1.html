@@ -10,12 +10,13 @@
     <!-- /부트스트랩 -->
 
     <!-- 폰트어썸 -->
-    <link rel="stylesheet" href="resource/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="resource/fontawesome/css/all.css">
     <!-- /폰트어썸 -->
 
     <!-- 스타일 -->
     <link rel="stylesheet" href="resource/css/style.css">
     <!-- /스타일 -->
+
 
 </head>
 <body>
@@ -125,7 +126,7 @@
             <!-- /유틸리티 -->
 
             <!-- 모바일 -->
-            <label for="menu_open" class="main_480" id="menu_open_btn"><i class="fa fa-reorder"></i></label>
+            <label for="menu_open" class="main_480" id="menu_open_btn"><i class="fas fa-bars"></i></label>
             <!-- /모바일 -->
         </header>
         <!-- /헤더 -->
@@ -146,57 +147,114 @@
                         <h5>무형문화재 현황</h5>
                     </div>
                     <div class="content_box">
-                        <table id="content_status_table">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>제목</th>
-                                    <th>설명</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>lorem input sotm</td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis natus minima rem cupiditate aliquam explicabo numquam asperiores officia at voluptatum vero illo fuga rerum, debitis provident id voluptates! Molestiae, nulla.</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>lorem input sotm</td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis natus minima rem cupiditate aliquam explicabo numquam asperiores officia at voluptatum vero illo fuga rerum, debitis provident id voluptates! Molestiae, nulla.</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>lorem input sotm</td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis natus minima rem cupiditate aliquam explicabo numquam asperiores officia at voluptatum vero illo fuga rerum, debitis provident id voluptates! Molestiae, nulla.</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>lorem input sotm</td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis natus minima rem cupiditate aliquam explicabo numquam asperiores officia at voluptatum vero illo fuga rerum, debitis provident id voluptates! Molestiae, nulla.</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>lorem input sotm</td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis natus minima rem cupiditate aliquam explicabo numquam asperiores officia at voluptatum vero illo fuga rerum, debitis provident id voluptates! Molestiae, nulla.</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>lorem input sotm</td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis natus minima rem cupiditate aliquam explicabo numquam asperiores officia at voluptatum vero illo fuga rerum, debitis provident id voluptates! Molestiae, nulla.</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>lorem input sotm</td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis natus minima rem cupiditate aliquam explicabo numquam asperiores officia at voluptatum vero illo fuga rerum, debitis provident id voluptates! Molestiae, nulla.</td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>lorem input sotm</td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis natus minima rem cupiditate aliquam explicabo numquam asperiores officia at voluptatum vero illo fuga rerum, debitis provident id voluptates! Molestiae, nulla.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div id="culture_header">
+                            <div id="culture_page_info">
+                                <p id="culture_all_page">총 <span>152</span>건</p>
+                                <p id="culture_page"><span class="now">1</span>p / <span class="all">13</span>p</p>
+                            </div>
+                            <div id="culture_list_type">
+                                <button class="culture_list_btn" id="album_btn">앨범</button>
+                                <button class="culture_list_btn select" id="list_btn">목록</button>
+                            </div>
+                        </div>
+
+                        <div id="culture_body" class="list">
+                            <div class="culture_list">
+                                <span class="culture_list_idx">1</span>
+                                <p class="culture_list_cate">국가무형문화재 제1호</p>
+                                <p class="culture_list_title">종묘제례약</p>
+                                <p class="culture_list_area">서울</p>
+                                <p class="culture_list_admin">(사)국가무형문화재 종묘제례약보존회</p>
+                            </div>
+                            <div class="culture_list">
+                                <span class="culture_list_idx">2</span>
+                                <p class="culture_list_cate">국가무형문화재 제2호</p>
+                                <p class="culture_list_title">양주별산대놀이</p>
+                                <p class="culture_list_area">경기 양주시</p>
+                                <p class="culture_list_admin">(사)국가무형문화재 제2호 양주별산대놀이보존회</p>
+                            </div>
+                            <div class="culture_list">
+                                <span class="culture_list_idx">3</span>
+                                <p class="culture_list_cate">국가무형문화재 제3호</p>
+                                <p class="culture_list_title">남사당놀이</p>
+                                <p class="culture_list_area">서울</p>
+                                <p class="culture_list_admin">남사당놀이보존회</p>
+                            </div>
+                            <div class="culture_list">
+                                <span class="culture_list_idx">4</span>
+                                <p class="culture_list_cate">국가무형문화재 제4호</p>
+                                <p class="culture_list_title">갓일</p>
+                                <p class="culture_list_area">기타</p>
+                                <p class="culture_list_admin">관련 정보가 없습니다.</p>
+                            </div>
+                            <div class="culture_list">
+                                <span class="culture_list_idx">5</span>
+                                <p class="culture_list_cate">국가무형문화재 제5호</p>
+                                <p class="culture_list_title">판소리</p>
+                                <p class="culture_list_area">기타</p>
+                                <p class="culture_list_admin">관련 정보가 없습니다.</p>
+                            </div>
+                            <div class="culture_list">
+                                <span class="culture_list_idx">6</span>
+                                <p class="culture_list_cate">국가무형문화재 제6호</p>
+                                <p class="culture_list_title">통영오광대</p>
+                                <p class="culture_list_area">경남 통영시</p>
+                                <p class="culture_list_admin">(사)국가무형문화재 제6호 통영오광대보존회</p>
+                            </div>
+                            <div class="culture_list">
+                                <span class="culture_list_idx">7</span>
+                                <p class="culture_list_cate">국가무형문화재 제7호</p>
+                                <p class="culture_list_title">고성오광대</p>
+                                <p class="culture_list_area">경남 고성군</p>
+                                <p class="culture_list_admin">(사)국가무형문화재 제7호 고성오광대보존회</p>
+                            </div>
+                            <div class="culture_list">
+                                <span class="culture_list_idx">8</span>
+                                <p class="culture_list_cate">국가무형문화재 제8호</p>
+                                <p class="culture_list_title">강강술래</p>
+                                <p class="culture_list_area">전남 진도군</p>
+                                <p class="culture_list_admin">(사)국가무형문화재 강강술래보존회</p>
+                            </div>
+                            <div class="culture_list">
+                                <span class="culture_list_idx">9</span>
+                                <p class="culture_list_cate">국가무형문화재 제9호</p>
+                                <p class="culture_list_title">은산별신제</p>
+                                <p class="culture_list_area">충남 부여군</p>
+                                <p class="culture_list_admin">(사)국가무형문화재 은산별신제</p>
+                            </div>
+                            <div class="culture_list">
+                                <span class="culture_list_idx">10</span>
+                                <p class="culture_list_cate">국가무형문화재 제10호</p>
+                                <p class="culture_list_title">나전장</p>
+                                <p class="culture_list_area">강원 원주시</p>
+                                <p class="culture_list_admin">관련 정보가 없습니다.</p>
+                            </div>
+                        </div>
+
+                        <div id="culture_footer">
+                            <div id="culture_buttons">
+                                <button class="culture_btn select">1</button>
+                                <button class="culture_btn">2</button>                                
+                                <button class="culture_btn">3</button>
+                                <button class="culture_btn">4</button>
+                                <button class="culture_btn">5</button>
+                                <button class="culture_btn">6</button>
+                                <button class="culture_btn">7</button>                                
+                                <button class="culture_btn">8</button>
+                                <button class="culture_btn">9</button>
+                                <button class="culture_btn">10</button>
+                            </div>
+                            <div id="culture_pagination_buttons">
+                                <div id="culture_page_prev">
+                                    <button class="culture_btn" id="culture_prev_block_btn"><i class="fas fa-angle-double-left"></i></button>
+                                    <button class="culture_btn" id="culture_prev_btn"><i class="fas fa-angle-left"></i></button>
+                                </div>
+                                <div id="culture_page_next">
+                                    <button class="culture_btn" id="culture_next_btn"><i class="fas fa-angle-right"></i></button>
+                                    <button class="culture_btn" id="culture_next_block_btn"><i class="fas fa-angle-double-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
